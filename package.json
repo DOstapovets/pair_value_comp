@@ -1,0 +1,23 @@
+{
+  "name": "pair_value_comp",
+  "version": "1.0.0",
+  "description": "OneReach.ai Pair Value Component",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^1.13.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DOstapovets/pair_value_comp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DOstapovets/pair_value_comp/issues"
+  },
+  "homepage": "https://github.com/DOstapovets/pair_value_comp#readme"
+}
