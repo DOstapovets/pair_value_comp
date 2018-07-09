@@ -36,7 +36,7 @@
     const {required, jsExpressionNonEmptyString, generateValidators} = validators;
 
     export default {
-        name       : 'editor-paired-value-example',
+        name       : 'editor-test-example',
         props      : ['template', 'schema', 'step', 'stepId', 'steps', 'readonly'],
         components : {email, password},
         computed   : {},
@@ -82,7 +82,7 @@
     };
 
     export const meta = {
-        name    : 'paired-value-external-component',
+        name    : 'test-external-component',
         type    : 'onereach-studio-form-editor',
         version : '1.0'
     };
@@ -92,7 +92,6 @@
     @import '../scss/colors.scss';
     .pair{
         display: flex;
-
         .or-select-expression{
             width: 40%;
         }
