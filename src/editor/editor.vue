@@ -90,7 +90,14 @@
 
 <style scoped lang="scss" rel="stylesheet/scss">
     @import '../scss/colors.scss';
-
+    .pair{
+        or-select-expression{
+            width: 40%;
+        }
+        or-text-expression{
+            width: 40%;
+        }
+    }
 </style>
 
 
