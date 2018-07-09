@@ -44,7 +44,13 @@
             return {};
         },
 
-        methods : {},
+        methods : {
+            listNewItemMethod() {
+            return {
+                text: '``'
+                }
+            }
+        },
 
         validations () {
             return {
