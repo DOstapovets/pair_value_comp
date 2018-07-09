@@ -97,9 +97,8 @@
     };
 </script>
 
-<style  lang="scss" rel="stylesheet/scss">
-    @import '../scss/colors.scss';
-    .pair{
+<style lang="scss" rel="stylesheet/scss">
+.pair{
         display: flex;
         .or-select-expression{
             width: 40%;
@@ -108,6 +107,10 @@
             width: 40%;
         }
     }
+</style>
+
+<style scoped lang="scss" rel="stylesheet/scss">
+    @import '../scss/colors.scss';
 </style>
 
 
