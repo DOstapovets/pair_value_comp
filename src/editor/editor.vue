@@ -101,15 +101,15 @@
 <style lang="scss" rel="stylesheet/scss">
 .pair{
         display: flex;
-        width: 88%;
+        width: 100%;
         align-items: center;
         .or-select-expression{
-            width: 47%;
+            width: 48%;
             margin: 3px;
         }
         .or-text-expression{
 
-            width: 47%;
+            width: 48%;
             margin: 3px;
             .header{
                 display: none;
