@@ -4,8 +4,8 @@ export default [
 ];
 
 export const meta = {
-    name    : 'paired-values-external-component',
+    name    : 'test-external-component',
     type    : 'onereach-studio-plugin',
-    label   : 'Paired values',
+    label   : 'Test example',
     version : '1.0'
 };

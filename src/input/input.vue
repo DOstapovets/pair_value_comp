@@ -59,7 +59,7 @@
         }
     };
 
-    export const label = 'Paired values';
+    export const label = 'Test example';
     export const data = {
         email               : '',
         emailPlaceholder    : 'Test email placeholder',
@@ -71,7 +71,7 @@
     };
 
     export const meta = {
-        name    : 'paired-values-external-component',
+        name    : 'test-external-component',
         type    : 'onereach-studio-form-input',
         version : '1.0'
     };
