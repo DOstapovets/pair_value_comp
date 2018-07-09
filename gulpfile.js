@@ -11,9 +11,7 @@ gulp.watch('./src/**',()=>{
     exec('git diff --name-only',(error, stdout, stderr)=>{
         if(stdout.split("\n").length){
             gulp.src('index.js').pipe(notify("Init commit"));
-            exec("git add .",()=>{
-                exec(`git commit -m 'UPDATE: ${stdout}' && git push`);
-            })
+            exec(`git add . && git commit -m 'UPDATE: ${stdout}' && git push`);
             console.log(stdout);
 
         }
