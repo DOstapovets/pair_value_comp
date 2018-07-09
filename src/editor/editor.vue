@@ -46,7 +46,16 @@
         data () {
             return {};
         },
-
+        computed : {
+            displayValue : {
+                get () {
+                    return _.get(this.schema, 'list', '');
+                },
+                set (newValue) {
+                    this.schema.email = newValue;
+                }
+            }
+        },
         methods : {
             listNewItemMethod() {
             return {
@@ -88,7 +97,7 @@
     };
 </script>
 
-<style scoped lang="scss" rel="stylesheet/scss">
+<style  lang="scss" rel="stylesheet/scss">
     @import '../scss/colors.scss';
     .pair{
         display: flex;
