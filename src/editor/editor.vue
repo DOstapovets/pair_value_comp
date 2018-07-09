@@ -99,10 +99,14 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-.pair{
+    .external-components-wrapper{
+        background: #F6F6F6;
+    }
+    .pair{
         display: flex;
         width: 100%;
         align-items: center;
+        background: white;
         .or-select-expression{
             width: 48%;
             margin: 3px;
