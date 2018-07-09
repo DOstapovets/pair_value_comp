@@ -121,6 +121,9 @@
             display: none;
         }
     }
+    .or-collapsible>.header{
+        min-height: 0;
+    }
     .icon-more{
         color: #A1A6AA;
     }
