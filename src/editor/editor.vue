@@ -101,12 +101,16 @@
 <style lang="scss" rel="stylesheet/scss">
 .pair{
         display: flex;
-        width: 80%;
+        width: 88%;
         .or-select-expression{
-            width: 45%;
+            width: 47%;
         }
         .or-text-expression{
-            width: 45%;
+
+            width: 47%;
+            .header{
+                display: none;
+            }
         }
     }
 </style>
