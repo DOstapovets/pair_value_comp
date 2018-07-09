@@ -3,7 +3,10 @@
         <or-collapsible title="Headers">
                 <or-list addButtonLabel="add new field"  v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
-                        <or-text-expression v-model="item.item.text" label="Enter field name"></or-text-expression>
+                        <div class="pair">
+                            <or-select-expression v-model="item.item.name" placeholder="Name"></or-select-expression>
+                            <or-text-expression v-model="item.item.value" placeholder="Value"></or-text-expression>
+                        </div>
                     </template>
                 </or-list>
             <div class="email-wrapper">
@@ -47,7 +50,8 @@
         methods : {
             listNewItemMethod() {
             return {
-                text: '``'
+                name: '``',
+                value:'``'
                 }
             }
         },
