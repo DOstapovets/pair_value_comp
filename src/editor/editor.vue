@@ -125,9 +125,6 @@
             display: none;
         }
     }
-    .or-collapsible>.header{
-        min-height: 100px;
-    }
     .icon-more{
         color: #A1A6AA;
     }
