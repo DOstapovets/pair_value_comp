@@ -12,7 +12,7 @@ gulp.watch('./src/**',()=>{
         if(stdout.split("\n").length){
             gulp.src('index.js').pipe(notify("Init commit"));
             exec("git add .",()=>{
-                exec(`git commit -m 'UPDATE: ${stdout}'`,exec('git push'));
+                exec(`git commit -m 'UPDATE: ${stdout}' && git push`);
             })
             console.log(stdout);
 
