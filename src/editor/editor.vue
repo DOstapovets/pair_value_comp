@@ -1,5 +1,6 @@
 <template>
     <div class="external-components-wrapper">
+        <or-collapsible title="Headers">
         <div class="email-wrapper">
             <email :schema="schema"
                    :label="template.emailLabel"
@@ -14,7 +15,9 @@
                       :$v="$v">
             </password>
         </div>
+        </or-collapsible>
     </div>
+    
 </template>
 <script>
     import * as _ from 'lodash';
