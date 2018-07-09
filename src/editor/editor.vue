@@ -6,7 +6,7 @@
                         <div class="pair">
                             <or-select-expression v-model="item.item.name" placeholder="Name"></or-select-expression>
                             <or-text-expression v-model="item.item.value" placeholder="Value"></or-text-expression>
-                            <or-icon icon="more_vert"></or-icon>
+                            <or-icon class="icon-more" icon="more_vert"></or-icon>
                         </div>
                     </template>
                 </or-list>
@@ -120,6 +120,9 @@
         .remove-button{
             display: none;
         }
+    }
+    .icon-more{
+        color: #A1A6AA;
     }
 </style>
 
