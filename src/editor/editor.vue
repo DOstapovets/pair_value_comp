@@ -108,13 +108,13 @@
         align-items: center;
         background: white;
         .or-select-expression{
-            width: 48%;
-            margin: 3px;
+            width: 50%;
+            margin: 10px 3px 10px 10px;
         }
         .or-text-expression{
 
-            width: 48%;
-            margin: 3px;
+            width: 50%;
+            margin: 10px 0;
             .header{
                 display: none;
             }
