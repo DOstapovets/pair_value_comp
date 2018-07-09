@@ -116,6 +116,11 @@
             }
         }
     }
+    .list-item{
+        .remove-button{
+            display: none;
+        }
+    }
 </style>
 
 <style scoped lang="scss" rel="stylesheet/scss">
