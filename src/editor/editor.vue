@@ -1,20 +1,25 @@
 <template>
     <div class="external-components-wrapper">
         <or-collapsible title="Headers">
-        <div class="email-wrapper">
-            <email :schema="schema"
-                   :label="template.emailLabel"
-                   :placeholder="template.emailPlaceholder"
-                   :$v="$v">
-            </email>
-        </div>
-        <div class="password-wrapper">
-            <password :schema="schema"
-                      :label="template.passwordLabel"
-                      :placeholder="template.passwordPlaceholder"
-                      :$v="$v">
-            </password>
-        </div>
+                <or-list addButtonLabel="add new field"  v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
+                    <template scope="item">
+                        <or-text-expression v-model="item.item.text" label="Enter field name"></or-text-expression>
+                    </template>
+                </or-list>
+            <div class="email-wrapper">
+                <email :schema="schema"
+                    :label="template.emailLabel"
+                    :placeholder="template.emailPlaceholder"
+                    :$v="$v">
+                </email>
+            </div>
+            <div class="password-wrapper">
+                <password :schema="schema"
+                        :label="template.passwordLabel"
+                        :placeholder="template.passwordPlaceholder"
+                        :$v="$v">
+                </password>
+            </div>
         </or-collapsible>
     </div>
     
@@ -50,6 +55,7 @@
     };
 
     export const data = (template) => ({
+        list                : template.list,
         email               : '',
         emailPlaceholder    : template.emailPlaceholder,
         emailLabel          : template.emailLabel,
