@@ -34,13 +34,6 @@
 <style scoped lang="scss" rel="stylesheet/scss">
     @import '../scss/colors.scss';
     @import '../scss/fonts.scss';
-    .password-wrapper {
-        .password-input-section {
-            .password-input {
-
-            }
-        }
-    }
 
 </style>
 
