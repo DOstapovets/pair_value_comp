@@ -34,15 +34,6 @@
 <style scoped lang="scss" rel="stylesheet/scss">
     @import '../scss/colors.scss';
     @import '../scss/fonts.scss';
-
-    .email-wrapper {
-        .email-input-section {
-            .email-input {
-                
-            }
-        }
-    }
-
 </style>
 
 <style lang="scss" rel="stylesheet/scss">
