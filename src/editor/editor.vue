@@ -102,12 +102,15 @@
 .pair{
         display: flex;
         width: 88%;
+        align-items: center;
         .or-select-expression{
             width: 47%;
+            margin: 3px;
         }
         .or-text-expression{
 
             width: 47%;
+            margin: 3px;
             .header{
                 display: none;
             }
