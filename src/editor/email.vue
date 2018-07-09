@@ -38,7 +38,7 @@
     .email-wrapper {
         .email-input-section {
             .email-input {
-
+                
             }
         }
     }

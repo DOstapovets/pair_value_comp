@@ -4,9 +4,12 @@
   "description": "OneReach.ai Pair Value Component",
   "main": "index.js",
   "dependencies": {
+    "gulp": "^3.9.1",
     "prettier": "^1.13.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-notify": "^3.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
