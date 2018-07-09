@@ -100,6 +100,7 @@
 <style lang="scss" rel="stylesheet/scss">
 .pair{
         display: flex;
+        width: 100%;
         .or-select-expression{
             width: 40%;
         }
