@@ -122,7 +122,7 @@
         }
     }
     .or-text-message .wrapper{
-         .message-input{
+         .message-input .input-wrapper .or-editable-wrapper{
              background: #f6f6f6;
          }
         border-radius: 0;
