@@ -122,6 +122,9 @@
         }
     }
     .or-text-message .wrapper{
+         .message-input{
+             background: #f6f6f6;
+         }
         border-radius: 0;
         border: none;
         padding: 0;
