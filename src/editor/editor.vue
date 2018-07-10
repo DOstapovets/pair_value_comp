@@ -5,9 +5,11 @@
                     <template scope="item">
                         <div class="pair">
                             <or-select-expression v-model="item.item.name" placeholder="Name"></or-select-expression>
-                            <div class="or-text-message">
-                                <or-text-expression class="message-input" v-model="item.item.value" placeholder="Value"></or-text-expression>
-                            </div>
+                                <div class="or-text-message">
+                                    <div class="wrapper">
+                                        <or-text-expression class="message-input" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                                    </div>
+                                </div>
                             <or-icon class="icon-more" icon="more_vert"></or-icon>
                         </div>
                     </template>
