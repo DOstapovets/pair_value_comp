@@ -98,7 +98,7 @@
     };
 </script>
 
-<style scoped lang="scss" rel="stylesheet/scss">
+<style lang="scss" rel="stylesheet/scss">
     .external-components-wrapper{
         background: #F6F6F6;
     }
