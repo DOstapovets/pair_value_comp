@@ -5,7 +5,9 @@
                     <template scope="item">
                         <div class="pair">
                             <or-select-expression v-model="item.item.name" placeholder="Name"></or-select-expression>
-                            <or-text-expression class="or-text-message message-input" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                            <div class="or-text-message">
+                                <or-text-expression class="message-input" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                            </div>
                             <or-icon class="icon-more" icon="more_vert"></or-icon>
                         </div>
                     </template>
@@ -110,13 +112,11 @@
             width: 50%;
             margin: 10px 3px 10px 10px;
         }
-        .or-text-expression{
+        .or-text-message{
 
             width: 50%;
             margin: 10px 0;
-            .header{
-                display: none;
-            }
+
         }
     }
     .or-list-items{
