@@ -120,7 +120,7 @@
             }
         }
     }
-    .list-item{
+    .or-list-items{
         .remove-button{
             display: none;
         }
