@@ -101,7 +101,6 @@
 <style lang="scss" rel="stylesheet/scss">
     .external-components-wrapper{
         background: #F6F6F6;
-    }
     .pair{
         display: flex;
         width: 100%;
@@ -127,6 +126,7 @@
     }
     .icon-more{
         color: #A1A6AA;
+    }
     }
 </style>
 
