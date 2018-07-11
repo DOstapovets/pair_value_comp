@@ -7,7 +7,7 @@
                     <template scope="item">
                         <div class="pair">
                                 <or-code v-if="isCode(item)"></or-code>   
-                                <div v-else>
+                                <div class="pair" v-else>
                                     <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                     <div class="or-text-message">
                                         <div class="wrapper">
