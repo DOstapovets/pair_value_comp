@@ -81,8 +81,9 @@
             displayMenuOption(index){
                 return [
                 {
-                    label : 'Code mode',
+                    label : `${this.$refs[`itemValue${val.index}`].mode=="text"?"Code":"UI"} mode`,
                     icon  : 'code',
+                    disabled : this.$refs[`itemValue${val.index}`].isStringExpression,
                     index 
                 },
                 {
