@@ -6,15 +6,18 @@
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                            <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
-                                <div class="or-text-message">
-                                    <div class="wrapper">
-                                        <or-text-expression :ref="`itemValue${item.index}`" class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                            <div v-if="item.isCode">
+                                <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
+                                    <div class="or-text-message">
+                                        <div class="wrapper">
+                                            <or-text-expression :ref="`itemValue${item.index}`" class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                                        </div>
                                     </div>
-                                </div>
-                            <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item.index)" raised></or-menu>
-                            </or-icon-button>
+                                <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
+                                        <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item.index)" raised></or-menu>
+                                </or-icon-button>
+                            </div>
+                            <or-code v-else></or-code>
                         </div>
                     </template>
                 </or-list>
@@ -107,7 +110,8 @@
             listNewItemMethod() {
             return {
                 name: '``',
-                value:'``'
+                value:'``',
+                isCode:false
                 }
             }
         },
