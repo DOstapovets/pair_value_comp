@@ -79,6 +79,7 @@
         },
         methods : {
             displayMenuOption(index){
+                console.log(this.$refs);
                 return [
                 {
                     label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
