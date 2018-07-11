@@ -9,7 +9,7 @@
                             <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                 <div class="or-text-message">
                                     <div class="wrapper">
-                                        <or-text-expression class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                                        <or-text-expression :ref="`itemValue${item.index}`" class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
                                     </div>
                                 </div>
                             <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
@@ -87,7 +87,8 @@
                 },
                 {
                     label : 'Delete',
-                    icon  : 'delete_forever',index
+                    icon  : 'delete_forever',
+                    index
                 }
                 ]
             },
@@ -95,8 +96,10 @@
                 console.log(val);
                 switch(val.label){
                     case "Delete":
-                    console.log("DELETE");
-                    this.$refs.refList.removeItem(val.index);
+                        this.$refs.refList.removeItem(val.index);
+                        break;
+                    default:
+                        this.$refs[`itemValue${val.index}`].toggleMode();
                 }
             },
             listNewItemMethod() {
