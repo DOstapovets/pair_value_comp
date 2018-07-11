@@ -6,7 +6,7 @@
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                            <div v-if="item.isCode">
+                            <div v-if="isCode(item)">
                                 <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                     <div class="or-text-message">
                                         <div class="wrapper">
@@ -71,12 +71,9 @@
             };
         },
         computed : {
-            isCode:{
-                get(){
-
-                }
-            }
-            
+            isCode(item){
+                return this.list[item.index].isCode;
+            },
             displayValue : {
                 get () {
                     return _.get(this.schema, 'list', '');
@@ -104,13 +101,12 @@
                     ]
             },
             selectMenu(val){
-                console.log(val);
                 switch(val.label){
                     case "Delete":
                         this.$refs.refList.removeItem(val.item.index);
                         break;
                     default:
-                        
+                        this.l
                 }
             },
             listNewItemMethod() {
