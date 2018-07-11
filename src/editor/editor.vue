@@ -79,27 +79,12 @@
             }
         },
         methods : {
-            // displayMenuOption(index){
-            //     return [
-            //     {
-            //         label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
-            //         icon  : 'code',
-            //         disabled : this.$refs[`itemValue${index}`].isStringExpression,
-            //         index 
-            //     },
-            //     {
-            //         label : 'Delete',
-            //         icon  : 'delete_forever',
-            //         index
-            //     }
-            //     ]
-            // },
             displayMenuOption(index){
                    return [
                         {
                             label : `${(this.$refs[`itemValue${index}`]&&this.$refs[`itemValue${index}`].mode=="text")?"Code":"UI"} mode`,
                             icon  : 'code',
-                            //disabled : this.$refs[`itemValue${index}`].isStringExpression,
+                            disabled : this.$refs[`itemValue${index}`]?this.$refs[`itemValue${index}`].isStringExpressionx:false,
                             index 
                         },
                         {
