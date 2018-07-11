@@ -79,7 +79,7 @@
         },
         methods : {
             selectMenu(val,index){
-                console.log(val);
+                console.log(arguments);
                 switch(val.label){
                     case "Delete":
                     this.$refs.listRef.removeItem(index);
