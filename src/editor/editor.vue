@@ -13,7 +13,7 @@
                                     </div>
                                 </div>
                             <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                    <or-menu slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
+                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
                             </or-icon-button>
                         </div>
                     </template>
@@ -77,6 +77,9 @@
             }
         },
         methods : {
+            selectMenu(val){
+                console.log(val);
+            },
             listNewItemMethod() {
             return {
                 name: '``',
