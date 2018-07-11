@@ -14,7 +14,7 @@
                                         </div>
                                     </div>
                                 <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                        <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item.index)" raised></or-menu>
+                                        <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item)" raised></or-menu>
                                 </or-icon-button>
                             </div>
                             <or-code v-else></or-code>
@@ -71,6 +71,11 @@
             };
         },
         computed : {
+            isCode:{
+                get(){
+
+                }
+            }
             
             displayValue : {
                 get () {
@@ -82,18 +87,19 @@
             }
         },
         methods : {
-            displayMenuOption(index){
+            displayMenuOption(item){
+                let index =item.index;
                    return [
                         {
-                            label : `${(this.$refs[`itemValue${index}`]&&this.$refs[`itemValue${index}`].mode=="text")?"Code":"UI"} mode`,
+                            label : `${item.isCode?"Code":"UI"} mode`,
                             icon  : 'code',
                             disabled : this.$refs[`itemValue${index}`]?!this.$refs[`itemValue${index}`].canStringify:false,
-                            index 
+                            item 
                         },
                         {
                             label : 'Delete',
                             icon  : 'delete_forever',
-                            index
+                            item
                         }
                     ]
             },
@@ -101,10 +107,10 @@
                 console.log(val);
                 switch(val.label){
                     case "Delete":
-                        this.$refs.refList.removeItem(val.index);
+                        this.$refs.refList.removeItem(val.item.index);
                         break;
                     default:
-                        this.$refs[`itemValue${val.index}`].toggleMode();
+                        
                 }
             },
             listNewItemMethod() {
