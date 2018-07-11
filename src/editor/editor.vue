@@ -72,7 +72,7 @@
         },
         computed : {
             isCode(item){
-                return template.list[item.index].isCode;
+                return this.template.list[item.index].isCode;
             },
             displayValue : {
                 get () {
