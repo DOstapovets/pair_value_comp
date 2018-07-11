@@ -6,7 +6,8 @@
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                                <div v-if="isCode(item)">
+                                <or-code v-if="isCode(item)"></or-code>   
+                                <div v-else>
                                     <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                     <div class="or-text-message">
                                         <div class="wrapper">
@@ -14,7 +15,6 @@
                                         </div>
                                     </div>
                                 </div>    
-                                <or-code v-else></or-code>   
                                 <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
                                         <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item)" raised></or-menu>
                                 </or-icon-button>
