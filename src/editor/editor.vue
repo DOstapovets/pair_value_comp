@@ -78,8 +78,8 @@
             }
         },
         methods : {
-            selectMenu(val,index){
-                console.log(arguments);
+            selectMenu(val){
+                console.log(val);
                 switch(val.label){
                     case "Delete":
                     console.log("DELETE");
