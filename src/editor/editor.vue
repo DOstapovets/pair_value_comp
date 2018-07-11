@@ -1,16 +1,20 @@
 <template>
     <div class="external-components-wrapper">
+        {{schema}}
+        {{template}}
         <or-collapsible title="Headers">
-                <or-list addButtonLabel="add new field"  v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
+                <or-list addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                            <or-select-expression v-model="item.item.name" placeholder="Name"></or-select-expression>
+                            <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                 <div class="or-text-message">
                                     <div class="wrapper">
-                                        <or-text-expression class="message-input" v-model="item.item.value" placeholder="Value"></or-text-expression>
+                                        <or-text-expression class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
                                     </div>
                                 </div>
-                            <or-icon class="icon-more" icon="more_vert"></or-icon>
+                            <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
+                                    <or-menu slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
+                            </or-icon-button>
                         </div>
                     </template>
                 </or-list>
@@ -49,7 +53,29 @@
         created () {},
 
         data () {
-            return {};
+            return {
+                menuOptions:[
+        {
+            label : 'Note',
+            icon  : 'edit'
+        },
+        {
+            label : 'Photo',
+            icon  : 'photo'
+        },
+        {
+            label : 'Document',
+            icon  : 'description'
+        },
+        {
+            type : 'divider'
+        },
+        {
+            label : 'Collection',
+            icon  : 'collections_bookmark'
+        }
+    ]
+            };
         },
         computed : {
             displayValue : {
