@@ -13,7 +13,7 @@
                                     </div>
                                 </div>
                             <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                    <or-menu @select="selectMenu.bind(this,item.index)" slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
+                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
                             </or-icon-button>
                         </div>
                     </template>
