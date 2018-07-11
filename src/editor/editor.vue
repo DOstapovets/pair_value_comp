@@ -56,23 +56,12 @@
             return {
                 menuOptions:[
         {
-            label : 'Note',
-            icon  : 'edit'
+            label : 'Code mode',
+            icon  : 'code'
         },
         {
-            label : 'Photo',
-            icon  : 'photo'
-        },
-        {
-            label : 'Document',
-            icon  : 'description'
-        },
-        {
-            type : 'divider'
-        },
-        {
-            label : 'Collection',
-            icon  : 'collections_bookmark'
+            label : 'Delete',
+            icon  : 'delete_forever'
         }
     ]
             };
