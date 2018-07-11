@@ -6,6 +6,7 @@
                 <or-list addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
+                            {{index}}{{items}}
                             <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                 <div class="or-text-message">
                                     <div class="wrapper">
@@ -55,15 +56,16 @@
         data () {
             return {
                 menuOptions:[
-        {
-            label : 'Code mode',
-            icon  : 'code'
-        },
-        {
-            label : 'Delete',
-            icon  : 'delete_forever'
-        }
-    ]
+                {
+                    label : 'Code mode',
+                    icon  : 'code'
+                },
+                {
+                    label : 'Delete',
+                    icon  : 'delete_forever'
+                }
+                ],
+                index:0
             };
         },
         computed : {
