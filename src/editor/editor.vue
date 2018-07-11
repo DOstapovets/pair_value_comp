@@ -82,6 +82,7 @@
                 console.log(arguments);
                 switch(val.label){
                     case "Delete":
+                    console.log("DELETE");
                     this.$refs.listRef.removeItem(index);
                 }
             },
