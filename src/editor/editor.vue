@@ -84,7 +84,7 @@
                         {
                             label : `${(this.$refs[`itemValue${index}`]&&this.$refs[`itemValue${index}`].mode=="text")?"Code":"UI"} mode`,
                             icon  : 'code',
-                            disabled : !this.$refs[`itemValue${index}`]?this.$refs[`itemValue${index}`].isStringExpression():false,
+                            disabled : !this.$refs[`itemValue${index}`]?this.$refs[`itemValue${index}`].isStringExpression():true,
                             index 
                         },
                         {
