@@ -71,9 +71,6 @@
             };
         },
         computed : {
-            isCode(item){
-                return this.template.list[item.index].isCode;
-            },
             displayValue : {
                 get () {
                     return _.get(this.schema, 'list', '');
@@ -84,6 +81,9 @@
             }
         },
         methods : {
+            isCode(item){
+                return this.template.list[item.index].isCode;
+            },
             displayMenuOption(item){
                 let index =item.index;
                    return [
