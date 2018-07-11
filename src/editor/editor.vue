@@ -6,7 +6,7 @@
                 <or-list addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                            {{index}}{{items}}
+                            {{item.index}}{{item.items}}
                             <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
                                 <div class="or-text-message">
                                     <div class="wrapper">
