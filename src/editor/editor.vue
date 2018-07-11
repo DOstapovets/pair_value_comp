@@ -96,7 +96,7 @@
                 switch(val.label){
                     case "Delete":
                     console.log("DELETE");
-                    this.$refs.refList.removeItem(index);
+                    this.$refs.refList.removeItem(val.index);
                 }
             },
             listNewItemMethod() {
