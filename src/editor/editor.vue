@@ -69,7 +69,7 @@
         },
         computed : {
             displayMenuOption:{
-                get(){
+                get(index){
                    return [
                         {
                             label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
