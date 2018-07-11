@@ -68,6 +68,16 @@
             };
         },
         computed : {
+            displayValue : {
+                get () {
+                    return _.get(this.schema, 'list', '');
+                },
+                set (newValue) {
+                    this.schema.email = newValue;
+                }
+            }
+        },
+        methods : {
             displayMenuOption(index){
                 return [
                 {
@@ -81,16 +91,6 @@
                 }
                 ]
             },
-            displayValue : {
-                get () {
-                    return _.get(this.schema, 'list', '');
-                },
-                set (newValue) {
-                    this.schema.email = newValue;
-                }
-            }
-        },
-        methods : {
             selectMenu(val){
                 console.log(val);
                 switch(val.label){
