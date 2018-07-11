@@ -173,6 +173,9 @@
         border-radius: 0;
         border: none;
         padding: 0;
+        .full-screen{
+            display: none;
+        }
     }
     .or-list-items{
         .remove-button{
