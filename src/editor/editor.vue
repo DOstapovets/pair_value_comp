@@ -68,6 +68,23 @@
             };
         },
         computed : {
+            displayMenuOption:{
+                get(){
+                   return [
+                        {
+                            label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
+                            icon  : 'code',
+                            disabled : this.$refs[`itemValue${index}`].isStringExpression,
+                            index 
+                        },
+                        {
+                            label : 'Delete',
+                            icon  : 'delete_forever',
+                            index
+                        }
+                    ]
+                }
+            },
             displayValue : {
                 get () {
                     return _.get(this.schema, 'list', '');
@@ -78,25 +95,21 @@
             }
         },
         methods : {
-            displayMenuOption(index){
-                this.$nextTick(()=>{
-                    console.log(this.$refs);
-                
-                });
-                return [
-                {
-                    label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
-                    icon  : 'code',
-                    disabled : this.$refs[`itemValue${index}`].isStringExpression,
-                    index 
-                },
-                {
-                    label : 'Delete',
-                    icon  : 'delete_forever',
-                    index
-                }
-                ]
-            },
+            // displayMenuOption(index){
+            //     return [
+            //     {
+            //         label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
+            //         icon  : 'code',
+            //         disabled : this.$refs[`itemValue${index}`].isStringExpression,
+            //         index 
+            //     },
+            //     {
+            //         label : 'Delete',
+            //         icon  : 'delete_forever',
+            //         index
+            //     }
+            //     ]
+            // },
             selectMenu(val){
                 console.log(val);
                 switch(val.label){
