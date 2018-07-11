@@ -13,7 +13,7 @@
                                     </div>
                                 </div>
                             <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
+                                    <or-menu @select="selectMenu(item.index)" slot="dropdown" has-icons :options="menuOptions" raised></or-menu>
                             </or-icon-button>
                         </div>
                     </template>
@@ -78,10 +78,11 @@
             }
         },
         methods : {
-            selectMenu(val){
+            selectMenu(val,index){
                 console.log(val);
-                switch(){
-
+                switch(val.label){
+                    case "Delete":
+                    this.$refs.listRef.removeItem(index);
                 }
             },
             listNewItemMethod() {
