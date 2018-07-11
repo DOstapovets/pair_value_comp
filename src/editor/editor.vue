@@ -3,7 +3,7 @@
         {{schema}}
         {{template}}
         <or-collapsible title="Headers">
-                <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
+                <or-list :ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
                             <or-select-expression v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-select-expression>
@@ -96,7 +96,7 @@
                 switch(val.label){
                     case "Delete":
                     console.log("DELETE");
-                    this.$refs.listRef.removeItem(index);
+                    this.$refs.refList.removeItem(index);
                 }
             },
             listNewItemMethod() {
