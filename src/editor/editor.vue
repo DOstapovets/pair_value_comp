@@ -79,7 +79,10 @@
         },
         methods : {
             displayMenuOption(index){
-                console.log(this.$refs);
+                this.$nextTick(()=>{
+                    console.log(this.$refs);
+                
+                });
                 return [
                 {
                     label : `${this.$refs[`itemValue${index}`].mode=="text"?"Code":"UI"} mode`,
