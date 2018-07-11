@@ -13,7 +13,7 @@
                                     </div>
                                 </div>
                             <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
-                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="{...menuOptions,index:item.index}" raised></or-menu>
+                                    <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item.index)" raised></or-menu>
                             </or-icon-button>
                         </div>
                     </template>
@@ -68,6 +68,19 @@
             };
         },
         computed : {
+            displayMenuOption(index){
+                return [
+                {
+                    label : 'Code mode',
+                    icon  : 'code',
+                    index 
+                },
+                {
+                    label : 'Delete',
+                    icon  : 'delete_forever',index
+                }
+                ]
+            },
             displayValue : {
                 get () {
                     return _.get(this.schema, 'list', '');
