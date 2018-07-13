@@ -17,9 +17,7 @@
                                 </div>    
                                 <or-icon-button hasDropdown type="secondary" class="icon-more" icon="more_vert">
                                         <or-menu @select="selectMenu" slot="dropdown" has-icons :options="displayMenuOption(item)" raised></or-menu>
-                                </or-icon-button>
-                            
-                            
+                                </or-icon-button>                           
                         </div>
                     </template>
                 </or-list>
