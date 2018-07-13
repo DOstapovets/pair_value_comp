@@ -1,7 +1,5 @@
 <template>
     <div class="external-components-wrapper">
-        {{schema}}
-        {{template}}
         <or-collapsible title="Headers">
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
