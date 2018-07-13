@@ -93,7 +93,7 @@
                 let index =item.index;
                    return [
                         {
-                            label : `${item.isCode?"Code":"UI"} mode`,
+                            label : `${item.isCode?"UI":"Code"} mode`,
                             icon  : 'code',
                             disabled : this.$refs[`itemValue${index}`]?!this.$refs[`itemValue${index}`].canStringify:false,
                             item 
