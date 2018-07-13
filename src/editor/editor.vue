@@ -158,11 +158,11 @@
         width: 100%;
         align-items: center;
         background: white;
-        .or-text-expression{
+        .name{
             width: 50%;
             margin: 10px 3px 10px 10px;
         }
-        .or-text-message{
+        .value{
             width: 50%;
             margin: 10px 0;
         }
