@@ -79,13 +79,6 @@
                 index:0
             };
         },
-        computed : {
-            codeComputed:{
-                get(){
-
-                }
-            }
-        },
         methods : {
             isCode(item){
                return this.template.list[item.index].isCode
