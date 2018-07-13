@@ -54,7 +54,13 @@
         computed   : {},
 
         created () {},
-
+        watch:{
+            'template.list':{
+                handle(){
+                    this.schema.list = this.template.list;
+                }
+            }
+        },
         data () {
             return {
                 menuOptions:[
