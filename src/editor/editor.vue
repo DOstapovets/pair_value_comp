@@ -113,9 +113,7 @@
                 name: '``',
                 value:'``',
                 isCode:false,
-                code:{
-                     "":""
-                }
+                code:''
                 }
             }
         },
