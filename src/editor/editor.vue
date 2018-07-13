@@ -161,6 +161,9 @@
         .name{
             width: 50%;
             margin: 10px 3px 10px 10px;
+            .header{
+                display: none;
+            }
         }
         .value{
             width: 50%;
