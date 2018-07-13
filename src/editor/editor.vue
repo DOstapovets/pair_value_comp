@@ -163,6 +163,9 @@
         width: 100%;
         align-items: center;
         background: white;
+        .code{
+            width: 100%;
+        }
         .name{
             width: 50%;
             margin: 10px 3px 10px 10px;
