@@ -55,7 +55,12 @@
         watch:{
             'template.list':{
                 handler(value){
-                    console.log(value);
+                    _.reduce(value, (obj,val)=> {
+                        if(val.isCode){
+
+                        }
+                        return obj;
+                    }, 0);
                     this.schema.list = value;
                 }
             }
