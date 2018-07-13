@@ -60,7 +60,7 @@
                             obj[val.name]=obj.value;
                         }
                         return obj;
-                    }, {});;
+                    }, {});
                 }
             }
         },
@@ -78,6 +78,14 @@
                 ],
                 index:0
             };
+        },
+        computed : {
+            codeComputed:{
+                get(item){
+                   return this.template.list[item.index].code||{[this.template.list[item.index].name]:this.template.list[item.index].value} 
+                }
+
+            }
         },
         methods : {
             isCode(item){
