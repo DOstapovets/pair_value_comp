@@ -55,13 +55,12 @@
         watch:{
             'template.list':{
                 handler(value){
-                    value = _.reduce(value, (obj,val)=> {
+                    this.schema.list = _.reduce(value, (obj,val)=> {
                         if(val.isCode){
                             obj[val.name]=obj.value;
                         }
                         return obj;
-                    }, {});
-                    this.schema.list = value;
+                    }, {});;
                 }
             }
         },
