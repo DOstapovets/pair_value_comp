@@ -165,6 +165,7 @@
         background: white;
         .code{
             width: 100%;
+            padding: 10px;
         }
         .name{
             width: 50%;
