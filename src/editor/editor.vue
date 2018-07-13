@@ -6,7 +6,7 @@
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                                <or-code v-if="isCode(item)"></or-code>   
+                                <or-code v-if="isCode(item)" v-model="codeComputed"></or-code>   
                                 <div class="pair" v-else>
                                     <or-text-expression class="name" disableCodeMode  disableVariables v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-text-expression>
                                     <div class="value or-text-message">
@@ -71,6 +71,11 @@
             };
         },
         computed : {
+            codeComputed:{
+                get(){
+
+                }
+            },
             displayValue : {
                 get () {
                     return _.get(this.schema, 'list', '');
@@ -106,7 +111,7 @@
                         this.$refs.refList.removeItem(val.item.index);
                         break;
                     default:
-                        this.l
+                        this.val.isCode=!this.val.isCode;
                 }
             },
             listNewItemMethod() {
