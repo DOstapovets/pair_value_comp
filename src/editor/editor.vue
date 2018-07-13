@@ -111,7 +111,7 @@
                         this.$refs.refList.removeItem(val.item.index);
                         break;
                     default:
-                        this.val.isCode=!this.val.isCode;
+                        val.item.isCode=!val.item.isCode;
                 }
             },
             listNewItemMethod() {
