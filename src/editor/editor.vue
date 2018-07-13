@@ -119,7 +119,10 @@
             return {
                 name: '``',
                 value:'``',
-                isCode:false
+                isCode:false,
+                    code:{
+                        "":""
+                    }
                 }
             }
         },
