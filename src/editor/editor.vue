@@ -158,15 +158,13 @@
         width: 100%;
         align-items: center;
         background: white;
-        .or-select-expression{
+        .or-text-expression{
             width: 50%;
             margin: 10px 3px 10px 10px;
         }
         .or-text-message{
-
             width: 50%;
             margin: 10px 0;
-
         }
     }
     .or-text-message .wrapper{
