@@ -80,11 +80,12 @@
             };
         },
         computed : {
-            codeComputed (item){
-                   return this.template.list[item.index].code||{[this.template.list[item.index].name]:this.template.list[item.index].value} 
-            }
+            
         },
         methods : {
+            codeComputed (item){
+                   return this.template.list[item.index].code||{[this.template.list[item.index].name]:this.template.list[item.index].value} 
+            },
             isCode(item){
                return this.template.list[item.index].isCode
             },
