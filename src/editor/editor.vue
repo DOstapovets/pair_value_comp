@@ -87,7 +87,7 @@
         },
         methods : {
             isCode(item){
-                this.template.list[item.index].isCode
+               return this.template.list[item.index].isCode
             },
             displayMenuOption(item){
                 let index =item.index;
