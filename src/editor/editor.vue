@@ -9,7 +9,7 @@
                                 <or-code v-if="isCode(item)"></or-code>   
                                 <div class="pair" v-else>
                                     <or-text-expression class="name" disableCodeMode  disableVariables v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-text-expression>
-                                    <div class="or-text-message">
+                                    <div class="value or-text-message">
                                         <div class="wrapper">
                                             <or-text-expression :ref="`itemValue${item.index}`" class="message-input" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="item.item.value" placeholder="Value"></or-text-expression>
                                         </div>
