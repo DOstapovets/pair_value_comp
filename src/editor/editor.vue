@@ -75,14 +75,6 @@
                 get(){
 
                 }
-            },
-            displayValue : {
-                get () {
-                    return _.get(this.schema, 'list', '');
-                },
-                set (newValue) {
-                    this.schema.email = newValue;
-                }
             }
         },
         methods : {
