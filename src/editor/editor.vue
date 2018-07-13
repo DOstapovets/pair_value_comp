@@ -4,7 +4,7 @@
                 <or-list ref="refList" addButtonLabel="add new field" :readonly="readonly" :steps="steps" :step-id="stepId" v-model="template.list" :new-item-method="listNewItemMethod" prettifyDrag>
                     <template scope="item">
                         <div class="pair">
-                                <or-code class="code" mode="json" hideHeader v-if="isCode(item)" v-model="codeComputed"></or-code>   
+                                <or-code class="code" mode="json" hideHeader v-if="isCode(item)" :v-model="codeComputed(item)"></or-code>   
                                 <div class="pair" v-else>
                                     <or-text-expression class="name" disableCodeMode  disableVariables v-model="item.item.name" :readonly="readonly" :steps="steps" :step-id="stepId" placeholder="Name"></or-text-expression>
                                     <div class="value or-text-message">
