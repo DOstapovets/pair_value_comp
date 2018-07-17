@@ -8,28 +8,17 @@
                     :readonly="true">
             </editor>
         </div>
-
         <or-modal ref="configModal" :remove-close-button="true"
                   title="Configure component"
                   class="input-message-settings"
                   :contain-focus="false">
-            <or-textbox name="label" label="Email Label" placeholder="label text"
+            <or-textbox name="label" label="OrCollapsible Label" placeholder="label text"
                         v-model="input.data.emailLabel"
                         help="input label text">
             </or-textbox>
 
             <or-textbox name="label" label="Email placeholder" placeholder="placeholder text"
                         v-model="input.data.emailPlaceholder"
-                        help="input label text">
-            </or-textbox>
-
-            <or-textbox name="label" label="Password Label" placeholder="label text"
-                        v-model="input.data.passwordLabel"
-                        help="input label text">
-            </or-textbox>
-
-            <or-textbox name="label" label="Password placeholder" placeholder="placeholder text"
-                        v-model="input.data.passwordPlaceholder"
                         help="input label text">
             </or-textbox>
 
